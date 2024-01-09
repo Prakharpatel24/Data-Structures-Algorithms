@@ -3,6 +3,7 @@ using namespace std;
 
 void bubbleSort(int arr[], int n){
     for(int i=n-1; i>=0; i--){
+        int didSwap=0;
         for(int j=0; j<=i-1; j++){
             if(arr[j]>arr[j+1]){
                 int temp=arr[j];
@@ -10,6 +11,7 @@ void bubbleSort(int arr[], int n){
                 arr[j+1]= temp;
             }
         }
+        if(didSwap==0) break;
     }
 }
 
